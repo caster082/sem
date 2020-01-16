@@ -1,17 +1,56 @@
 @startuml
 
 actor HR as "HR Advisor"
+actor DM as "department manager"
 
 rectangle Database
 
 rectangle "HR System" {
     usecase UC4 as "Get salaries by role"
 
-    usecase UCa as "Print salaries"
+    usecase UC5 as "Produce a report
+    of all salaries."
+
+    usecase UC6 as "Produce report
+    of salaries by department"
+
+    usecase UC7 as "Produce report
+    of salaries by department"
+
+
+    usecase UC8 as "Add new employee"
+    usecase UC9 as "Update employee details"
+    usecase UC10 as "Delete employee details"
+    usecase UC11 as "Manage employee details"
+
+    usecase UCa as "Print salaries "
+    usecase UCc as "Print salaries report "
+    usecase UCb as "Print salaries report
+    by department"
+
 
     HR - UC4
+    HR - UC5
+    HR - UC6
+    HR - UC11
+    DM - UC7
+
     UC4 ..> UCa : include
+    UC6 ..> UCb : include
+    UC7 ..> UCb : include
+    UC5 ..> UCc : include
+
+    UC11 <.. UC8 : extend
+    UC11 <.. UC9 : extend
+    UC11 <.. UC10 : extend
+
     UC4 - Database
+    UC5 - Database
+    UC7 - Database
+
+
 }
 
 @enduml
+
+#8 Delete employee details.
