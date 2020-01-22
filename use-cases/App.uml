@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.napier.sem.App</OriginalElement>
+  <nodes>
+    <node x="0.0" y="382.0">com.napier.sem.App</node>
+    <node x="55.5" y="147.0">com.napier.sem.Employee</node>
+    <node x="55.5" y="0.0">com.napier.sem.Department</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.napier.sem.App" target="com.napier.sem.Employee">
+      <point x="65.5" y="-112.5" />
+      <point x="196.5" y="357.0" />
+      <point x="168.75" y="357.0" />
+      <point x="37.75" y="92.5" />
+    </edge>
+    <edge source="com.napier.sem.Department" target="com.napier.sem.Employee">
+      <point x="37.75" y="48.5" />
+      <point x="37.75" y="-92.5" />
+    </edge>
+    <edge source="com.napier.sem.Employee" target="com.napier.sem.Department">
+      <point x="-37.75" y="-92.5" />
+      <point x="-37.75" y="48.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.3" x="187.24175824175825" y="240.38461538461536" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
