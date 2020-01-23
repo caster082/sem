@@ -58,7 +58,7 @@ public class App {
                             + emp.last_name + "\n"
                             + emp.title + "\n"
                             + "Salary:" + emp.salary + "\n"
-                           // + Department.dept + "\n"
+                           // + com.napier.sem.Department.dept + "\n"
                             + "Manager: " + emp.manager + "\n");
         }
     }
@@ -94,10 +94,20 @@ public class App {
     }
 
     public void printSalaries(ArrayList<Employee> employees) {
+
+        // Check employees is not null
+        if (employees == null)
+        {
+            System.out.println("No employees");
+            return;
+        }
         // Print header
         System.out.println(String.format("%-10s %-15s %-20s %-8s", "Emp No", "First Name", "Last Name", "Salary"));
         // Loop over all employees in the list
-        for (Employee emp : employees) {
+        for (Employee emp : employees)
+        {
+            if (emp == null)
+                continue;
             String emp_string =
                     String.format("%-10s %-15s %-20s %-8s",
                             emp.emp_no, emp.first_name, emp.last_name, emp.salary);
@@ -132,7 +142,7 @@ public class App {
         catch (Exception e)
         {
            System.out.println(e.getMessage());
-            System.out.println("Failed to get Department details");
+            System.out.println("Failed to get com.napier.sem.Department details");
             return null;
         }
     }
@@ -183,23 +193,23 @@ public class App {
 
         // Connect to database
         a.connect();
-        // Get Employee
+        // Get com.napier.sem.Employee
         //Employee emp = a.getEmployee(255530);
 
         // Display results
-        // a.displayEmployee(emp);
+         //a.displayEmployee(emp);
 
         // Extract employee salary information
-        //ArrayList<Employee> employees = a.getAllSalaries();
+        ArrayList<Employee> employees = a.getAllSalaries();
 
         // Test the size of the returned data - should be 240124
-        //System.out.println(employees.size());
+        System.out.println(employees.size());
 
-        //a.printSalaries(employees);
+        a.printSalaries(employees);
 
 
         // Extract employee salary information
-        ArrayList<Employee> employees = a.getSalariesByDepartment("Sales");
+        //ArrayList<com.napier.sem.Employee> employees = a.getSalariesByDepartment("Sales");
 
         // Disconnect from database
         a.disconnect();

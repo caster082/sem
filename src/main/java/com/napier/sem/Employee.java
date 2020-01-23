@@ -6,37 +6,37 @@ package com.napier.sem;
 public class Employee
 {
     /**
-     * Employee number
+     * com.napier.sem.Employee number
      */
     public int emp_no;
 
     /**
-     * Employee's first name
+     * com.napier.sem.Employee's first name
      */
     public String first_name;
 
     /**
-     * Employee's last name
+     * com.napier.sem.Employee's last name
      */
     public String last_name;
 
     /**
-     * Employee's job title
+     * com.napier.sem.Employee's job title
      */
     public String title;
 
     /**
-     * Employee's salary
+     * com.napier.sem.Employee's salary
      */
     public int salary;
 
     /**
-     * Employee's current department
+     * com.napier.sem.Employee's current department
      */
     public Department dept;
 
     /**
-     * Employee's manager
+     * com.napier.sem.Employee's manager
      */
     public Employee manager;
 
